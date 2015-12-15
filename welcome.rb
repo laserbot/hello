@@ -19,8 +19,6 @@ fishing_hole = {
     4 => "salmon",
     5 => "albacore"
 }
-
-
 pl_input = ''
 
 #Method for status
@@ -52,7 +50,7 @@ def fish(pl_status,fishing_hole)
   sleep(1)
   print '... '
   sleep(1)
-  print fishing_hole[rand(5)]
+  print fishing_hole[rand(1..5)]
   print '!!'
   sleep(1.5)
   #fishing_hole.each do |item,val|
@@ -85,7 +83,6 @@ def main_select(pl_options, pl_status, fishing_hole)
       when pl_input.downcase == 'status'
         status(pl_status)
       when pl_input.downcase == 'fish'
-
         fish(pl_status, fishing_hole)
       when pl_input.downcase == 'action'
         action(pl_status)
